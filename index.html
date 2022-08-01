@@ -14,125 +14,139 @@
 <body>
  <main class="font-['Open_Sans']">
   <!--------- start Header ------------------>
-  <header style="background-image:url(./images/desktop/image-hero.jpg) ;" class=" relative w-full h-[40rem] bg-cover bg-no-repeat bg-center">
-  <nav class="container md:mx-auto px-44 pt-10 flex flex-row  justify-between">
-    
-<a href=""><img src="./images/logo.svg" alt=""></a>
+  <header style="background-image:url(./images/desktop/image-hero.jpg) ;" class=" relative w-full h-[40rem] bg-cover bg-no-repeat bg-center ">
+  <nav class="container px-10 sm:px-6 md:px-44 pt-10 flex flex-row justify-between ">
+    <a href=""><img src="./images/logo.svg" alt=""></a>
 <div class="">
 
 <ul class=" hidden  md:flex flex-row text-white font-medium space-x-5  ">
   <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> About</a></li>
- 
-  <li><a class=" hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href="">Careers</a></li>
+ <li><a class=" hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href="">Careers</a></li>
   <li><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Events</a></li>
   <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Products</a></li>
   <li><a  class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block "href="">support</a></li>
 </ul>
 </div>
-<button class=" block   md:hidden">
+<!------- menu-button ------------>
+<button id="menu-btn" class=" block   md:hidden">
   <img    src="./images/icon-hamburger.svg" alt="">
 </button>
 </nav>
-<div class="container m-auto md:ml-44 p-10 mt-32 border-4 border-solid rounded border-slate-100 h-72 max-h-96 w-[40rem] ">
-<h1 class="uppercase text-7xl  text-gray-50 ">Immersive experiences that deliver</h1>
+<div class="container  m-auto md:ml-44 p-10 mt-32 border-4 border-solid rounded border-slate-100 h-64 w-[24rem] sm:h-60 md:h-72 max-h-96 sm:w-[40rem] ">
+<h1 class="uppercase text-5xl sm:text-6xl md:text-7xl  text-gray-50 ">Immersive experiences that deliver</h1>
 </div>
-<div class=" bg-white h-[30rem] w-[40rem] pt-20 text-center font-bold absolute top-28  left-8 mx-auto md:hidden">
-
-
-  <ul class="   flex flex-col text-slate-900  space-y-12 ">
-    <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> About</a></li>
-   
-    <li><a class=" hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href="">Careers</a></li>
-    <li><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Events</a></li>
-    <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Products</a></li>
-    <li><a  class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block "href="">support</a></li>
+<!------- mobile menu ----------->
+<div id="menu-list" class="text-white bg-black max-w-sm h-[35rem] w-[40rem] pt-12 text-left font-bold absolute top-28 pl-12 left-8 mx-auto hidden flex-col space-y-24 ">
+  <div class=" flex   space-x-24">
+  <a href=""><img src="./images/logo.svg" alt=""></a>
+  <!-- close button -->
+  <button id="close-btn">
+    <img    src="./images/icon-close.svg" alt="">
+  </button>
+</div>
+  <ul class="   flex flex-col  space-y-12 ">
+    <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-full hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> About</a></li>
+   <li><a class=" hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-full hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href="">Careers</a></li>
+    <li><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-full hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Events</a></li>
+    <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-full hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Products</a></li>
+    <li><a  class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-full hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block "href="">support</a></li>
   </ul>
   </div>
+  <!------ end of mobile menu ------>
 </header>
  <!--------- End of Header ------------------>
   <!--------- Leader Section ------------------>
-<section class=" relative justify-center mt-20 w-full h-[35rem] px-32 flex  flex-col md:flex-row">
+<section class=" relative justify-center mt-28 md:mt-20 w-full h-[40rem] px-6 md:px-32 flex flex-col  md:flex-row">
 <div class="mb-16 ">
-  <img class="bottom-0 left-44 z-0 absolute " src="./images/desktop/image-interactive.jpg" alt="">
+  <img class="md:bottom-0 md:left-44 md:z-0 md:absolute " src="./images/desktop/image-interactive.jpg" alt="">
 </div>
-<div class="bg-white right-52 w-[35rem] h-[20rem] bottom-0  z-50 p-10 absolute">
-  <h2 class="uppercase text-6xl mb-6 text-slate-900">The leader in interactive VR</h2>
+<div class="bg-white text-center md:right-52  md:w-[35rem] h-[20rem] md:bottom-0  md:z-50 md:p-10 md:absolute">
+  <h2 class="uppercase text-5xl md:text-6xl mb-6 text-slate-900">The leader in interactive VR</h2>
 <p class="text-slate-500  ">Founded in 2011, Loopstudios has been producing world-class virtual reality 
   projects for some of the best companies around the globe. Our award-winning 
   creations have transformed businesses through digital experiences that bind 
   to their brand.</p>
-
 </div>
 </section>
  <!--------- Btn section ------------------>
- <section class="mt-32 mb-16 w-full h-24   ">
-  <div class="flex px-44 pt-7 justify-between">
-    <h2 class="uppercase text-6xl text-black">Our creations</h2>
-    <button class=" hover:text-emerald-50 hover:bg-black rounded-sm border-2 border-solid border-black  px-16 py-2">See all</button>
+ <section class="hidden  sm:block sm:mt-24 md:mt-32 mb-16 w-full h-24   ">
+  <div class="flex  sm:px-14  md:px-44 pt-7 justify-between">
+    <h2 class="uppercase sm:text-4xl md:text-6xl  text-black">Our creations</h2>
+    <button class="  hover:text-emerald-50 hover:bg-black rounded-sm border-2 border-solid border-black  px-16 py-2">See all</button>
   </div>
-  
- </section>
+  </section>
  <!--------- Grid Section ------------------>
- <section class="mt-32  w-full h-[65rem]  px-44  ">
-  <div class="grid md:grid-cols-4 gap-6">
+ <section class=" mt-24 sm:mb-20 md:mb-10 sm:mt-20 md:mt-32 mb-10  w-full md:h-[65rem] px-6 sm:px-8 md:px-44  ">
+<div class="grid auto-rows-auto w-fit mx-auto  sm:grid-cols-2 md:grid-cols-4 grid-cols-1 gap-6   justify-center">
+<!-- heading-Our creations -->
+    <h2 class=" md:hidden mb-10  sm:hidden uppercase text-4xl text-center text-black">Our creations</h2>
+    <div class="container relative  ">
+      <a href=""><img  class="hidden sm:block md:block"src="./images/desktop/image-deep-earth.jpg" alt=""></a>
+      <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-deep-earth.jpg" alt=""></a>
+      <h3 class="uppercase text-3xl text-white absolute bottom-2 left-12 "> Deep <br> earth</h3>
+    </div>
+    <!-- end of heading -->
+    <div class="container relative  "> 
+      <a href=""><img class="hidden sm:block md:block" src="./images/desktop/image-night-arcade.jpg" alt=""></a>
+      <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-night-arcade.jpg" alt=""></a>
+      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-6"> Night <br> arcade</h3>
+    </div>
+    <div class="container relative"> 
+      <a href=""><img class="hidden sm:block md:block" src="./images/desktop/image-soccer-team.jpg" alt=""></a>
+      <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-soccer-team.jpg" alt=""></a>
+      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-2">Soccer <br> team VR</h3>
+    </div>
     <div class="container relative">
-      <a href=""><img  src="./images/desktop/image-deep-earth.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white absolute bottom-2 left-12"> Deep earth</h3>
+       <a href=""><img class="hidden sm:block md:block" src="./images/desktop/image-grid.jpg" alt=""></a>
+       <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-grid.jpg" alt=""></a>
+       <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-8">The <br> grid</h3>
     </div>
     <div class="container relative"> 
-      <a href=""><img src="./images/desktop/image-night-arcade.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-6"> Night arcade</h3>
+      <a href=""><img class="hidden sm:block md:block" src="./images/desktop/image-from-above.jpg" alt=""></a>
+      <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-from-above.jpg" alt=""></a>
+      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-4">From up <br> above VR</h3>
     </div>
     <div class="container relative"> 
-      <a href=""><img src="./images/desktop/image-soccer-team.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-2">Soccer team VR</h3>
-    </div>
-    <div class="container relative">
-       <a href=""><img src="./images/desktop/image-grid.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-8">The grid</h3>
+      <a href=""><img class="hidden sm:block md:block" src="./images/desktop/image-pocket-borealis.jpg" alt=""></a>
+      <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-pocket-borealis.jpg" alt=""></a>
+      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-8"> Pocket <br> borealis</h3>
     </div>
     <div class="container relative"> 
-      <a href=""><img src="./images/desktop/image-from-above.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-4">From up above VR</h3>
+      <a href=""><img class="hidden sm:block md:block" src="./images/desktop/image-curiosity.jpg" alt=""></a>
+      <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-curiosity.jpg" alt=""></a>
+      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-8">The <br> curiosity</h3>
     </div>
     <div class="container relative"> 
-      <a href=""><img src="./images/desktop/image-pocket-borealis.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-8"> Pocket borealis</h3>
+      <a href=""><img class="hidden sm:block md:block" src="./images/desktop/image-fisheye.jpg" alt=""></a>
+      <a href=""><img  class=" block sm:hidden md:hidden"src="./images/mobile/image-fisheye.jpg" alt=""></a>
+      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-4"> Make it <br> fisheye</h3>
     </div>
-    <div class="container relative"> 
-      <a href=""><img src="./images/desktop/image-curiosity.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-8">The curiosity</h3>
-    </div>
-    <div class="container relative"> 
-      <a href=""><img src="./images/desktop/image-fisheye.jpg" alt=""></a>
-      <h3 class="uppercase text-3xl text-white  absolute bottom-2 left-4"> Make it fisheye</h3>
-    </div>
+    <div class="block md:hidden sm:hidden mt-6 mb-12 mx-auto ">
+    <button class="  hover:text-emerald-50 hover:bg-black rounded-sm border-2 border-solid border-black  px-20 py-4">See all</button>
+</div>
   </div>
  </section>
  <!---------- footer ---------------->
- <footer class="w-full h-36 bg-black py-8   px-44">
-  <div class="flex justify-between ">
-  <div class="flex flex-col">
-
-  <a href=""><img src="./images/logo.svg" alt=""></a>
-  <ul class=" hidden mt-5 md:flex flex-row text-slate-50 justify-between font-medium space-x-5 ">
+ <footer class="w-full h-[30rem] sm:h-36 bg-black py-8  sm:px-6  md:px-44">
+  <div class="flex flex-col sm:flex-row items-center  sm:justify-between ">
+  <div class="flex flex-col mt-7 sm:mt-0">
+<a href=""><img src="./images/logo.svg" alt=""></a>
+  <ul class="  mt-10 sm:mt-5 flex flex-col sm:flex-row text-slate-50 items-center  justify-between font-medium leading-10 sm:leading-none sm:space-x-5 ">
     <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> About</a></li>
-   
-    <li><a class=" hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href="">Careers</a></li>
+   <li><a class=" hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href="">Careers</a></li>
     <li><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Events</a></li>
     <li ><a class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block " href=""> Products</a></li>
     <li><a  class="hover:text-green-300 hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block "href="">support</a></li>
   </ul>
 </div>
-<div class="flex flex-col align-middle ">
+<div class="flex flex-col align-middle sm:m-0 m-8 items-center ">
 <div class="flex space-x-5">
   <a class=" hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block" href=""><img src="./images/icon-facebook.svg" alt=""></a>
   <a class=" hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block" href=""><img src="./images/icon-twitter.svg" alt=""></a>
   <a class=" hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block" href=""><img src="./images/icon-pinterest.svg" alt=""></a>
   <a class=" hover:before:transition transform hover:before:block hover:before:absolute hover:before:rounded-md hover:before:h-1 hover:before:w-2/3 hover:before:-bottom-2 hover:before:inset-x-0 hover:before:bg-green-300 relative inline-block" href=""><img src="./images/icon-instagram.svg" alt=""></a>
-  
-</div>
-<p class="text-green-300 mt-5">All rights Reserved</p>
+  </div>
+<p class="text-green-300 mt-5 ">&copy; 2022  All rights reserved.</p>
 </div>
 </div>
  </footer>
@@ -164,6 +178,6 @@
 
   
 
-  
+ <script src="main.js"></script>
 </body>
 </html>
